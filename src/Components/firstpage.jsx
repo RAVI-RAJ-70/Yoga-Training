@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./YogaTrainingCard.css";
 
 const bullets = {
@@ -6,31 +6,18 @@ const bullets = {
   marginBottom: "20px",
 };
 
-function FirstPage() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 720);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 720) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    // Cleanup function to remove the event listener
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+function firstpage() {
   return (
     <div>
       <div className="header1">
-        <h1>
-          Pricing <span className="highlight">Options</span>
-        </h1>
+      <h1 className="main-heading">
+            Pricing <span className="highlight">Options</span> 
+          </h1>
+        </div>
 
-        <div className={`App ${isMobile ? "mobile" : ""}`}>
+        
+
+        <div className="App">
           <div className="yoga-card" id="card1">
             <div className="card-header">
               <img src="images/Frame 9116 (2).png" alt="Placeholder" />
@@ -51,7 +38,8 @@ function FirstPage() {
               <p className="freebie">
                 FREE{" "}
                 <span className="highlight-white">
-                  Restorative Yoga Teacher Training
+                  {" "}
+                  Restorative Yoga Teacher Training{" "}
                 </span>{" "}
                 (worth $147)
               </p>
@@ -94,14 +82,15 @@ function FirstPage() {
               <p className="freebie">
                 FREE{" "}
                 <span className="highlight-black">
-                  Restorative Yoga Teacher Training
+                  Restorative Yoga Teacher Training{" "}
                 </span>{" "}
                 (worth $147)
               </p>
               <p className="freebie">
                 FREE{" "}
                 <span className="highlight-black">
-                  Ayurvedic Certification Course
+                  {" "}
+                  Ayurvedic Certification Course{" "}
                 </span>{" "}
                 (worth $247)
               </p>
@@ -128,9 +117,9 @@ function FirstPage() {
             <button className="buy-button">Buy Now</button>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 }
 
-export default FirstPage;
+export default firstpage;

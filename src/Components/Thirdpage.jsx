@@ -1,51 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./InstructorCard.css";
 
 const bullets = {
   backgroundImage: 'url("/images/Group 17.png")',
   marginBottom: "20px",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "25px 25px", 
-  paddingLeft: "40px", 
-  marginRight: "20px", 
-  lineHeight: "10px", 
+  backgroundSize: "25px 25px", // Adjust the bullet size
+  paddingLeft: "40px", // Space for the image
+  marginRight: "20px", // Space between items
+  lineHeight: "10px", // Align text with the image
 };
 
 function Thirdpage() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 720);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 720) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <div>
+      
       <div className="instructor-container-bg">
-        <div className={`instructor-container ${isMobile ? "mobile" : ""}`}>
-          <h1 className="title">
-            Know More About Our Globally <br />
-            <span className="highlight">Recognized Yoga Instructors</span>
+        <div className="instructor-container">
+
+          <h1 className="main-heading">
+          Know More About Our Globally <br /> <span className="highlight">Recognized Yoga Instructors</span>
+            
           </h1>
 
-          <div className="bord1"></div>
-          <div className="bord"></div>
-
+           <div className="bord1"> </div>
+          <div className="bord"> </div>
+         
           <div className="instructor-card">
+            
+
             {/* Left Side: Instructor Image */}
             <div className="instructor-image">
               <div className="img_frame">
                 <img src="images/Group 16.jpg" alt="Raaz" />
               </div>
+
               <br />
               <p className="instructor-name">Dr. Sumit Sharma</p>
             </div>
@@ -100,7 +89,7 @@ function Thirdpage() {
                     holds a master’s Degree in Physical Therapy, a Diploma in
                     Sports Medicine, and is a certified Yoga Alliance Continuing
                     Education Provider (YACEP).
-                  </strong>
+                  </strong>{" "}
                 </p>
                 <p>
                   He manages to lift Anatomy training off the pages of books and
@@ -113,6 +102,7 @@ function Thirdpage() {
         </div>
       </div>
     </div>
+   
   );
 }
 

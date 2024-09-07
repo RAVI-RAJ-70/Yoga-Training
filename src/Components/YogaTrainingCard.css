@@ -10,12 +10,12 @@
 }
 
 .yoga-card {
-  border: 5px solid #ddd;
+  
   border-radius: 20px;
   position: relative;
   font-size: 22px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+
   transition: transform 0.3s;
   height: 950px;
   width: 600px;
@@ -78,6 +78,7 @@
 .features-list li {
   background-repeat: no-repeat;
   padding-left: 40px; 
+
   line-height: 20px; 
 }
 
@@ -131,19 +132,57 @@
   background-clip: text;
 }
 
-@media (max-width: 720px) {
+@media only screen and (max-width: 425px) {
   .App {
     flex-direction: column;
+
     padding: 20px;
+    
   }
 
   .yoga-card {
-    width: 100%;
-    max-width: 90%;
-    height: auto;
+    width: 180%;
+   
+    height: 1000px;
+    margin-bottom: 40%;
+    font-size: 18px;
   }
 
   .buy-button {
-    width: 100%;
+    width: 90%;
+    font-size: 18px;
   }
+
+  .card-header {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .features-list li {
+    padding-left: 30px; /* Reduced padding for smaller screens */
+  }
+
+  .main-heading {
+    margin-bottom: 60px;
+   
+   margin-right: -250px;
+  }
+
+  .freebie {
+    color: #00a000;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+ 
+  .card-header{
+    margin-top: -50px;
+    
+  }
+
+  
 }
