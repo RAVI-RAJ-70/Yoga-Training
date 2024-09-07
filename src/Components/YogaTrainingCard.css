@@ -1,0 +1,149 @@
+* {
+  font-family: figtree;
+}
+
+.App {
+  display: flex;
+  gap: 50px;
+  padding: 70px;
+  justify-content: center;
+}
+
+.yoga-card {
+  border: 5px solid #ddd;
+  border-radius: 20px;
+  position: relative;
+  font-size: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: transform 0.3s;
+  height: 950px;
+  width: 600px;
+}
+
+#card1 {
+  justify-content: flex-start;
+  background: linear-gradient(
+    to left,
+    rgba(10, 11, 10, 1),
+    rgba(31, 63, 56, 1)
+  );
+  color: #ddd;
+}
+
+.yoga-card:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  text-align: center;
+  margin-top: -60px;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #ff0000;
+  margin-right: 10px;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.freebie {
+  color: #00a000;
+  font-weight: bold;
+}
+
+.highlight-black {
+  color: #000;
+}
+
+.highlight-white {
+  color: white;
+}
+
+.features-list {
+  text-align: left;
+  list-style: none; 
+}
+
+.features-list li {
+  background-repeat: no-repeat;
+  padding-left: 40px; 
+  line-height: 20px; 
+}
+
+.buy-button {
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 550px;
+  margin-top: 30px;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  background: linear-gradient(
+    to right,
+    rgba(243, 204, 46, 1),
+    rgba(255, 235, 154, 1)
+  );
+}
+
+.buy-button:hover {
+  background-color: #ffa500;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.5),
+    rgba(255, 0, 0, 1)
+  );
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(84, 84, 84, 1);
+  width: 90%;
+}
+
+.App {
+  text-align: center;
+}
+
+.header1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.highlight {
+  background: linear-gradient(
+    to left,
+    rgba(69, 178, 157, 1),
+    rgba(4, 105, 110, 1)
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (max-width: 720px) {
+  .App {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .yoga-card {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .buy-button {
+    width: 100%;
+  }
+}
