@@ -1,65 +1,99 @@
 * {
-  font-family: figtree;
+  font-family: "Figtree", sans-serif;
 }
 
 .App {
   display: flex;
-  gap: 50px;
-  padding: 70px;
+  gap: 25px;
+
   justify-content: center;
+  text-align: center;
+}
+
+.main-heading01 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .yoga-card {
-  
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
-  font-size: 22px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  font-size: 11px;
+  border: 1.5px solid rgba(69, 178, 157, 1);
 
-  transition: transform 0.3s;
-  height: 950px;
-  width: 600px;
+  height: 500px;
+  width: 325px;
+}
+
+.resized-image {
+  width: 25%;
 }
 
 #card1 {
   justify-content: flex-start;
-  background: linear-gradient(
-    to left,
-    rgba(10, 11, 10, 1),
-    rgba(31, 63, 56, 1)
-  );
-  color: #ddd;
-}
+  background: linear-gradient(to top, rgba(10, 11, 10, 1), rgba(31, 63, 56, 1));
 
-.yoga-card:hover {
-  transform: scale(1.05);
+  border: linear-gradient(to top, rgba(69, 178, 157, 1), rgba(4, 105, 110, 1));
+  color: #ddd;
 }
 
 .card-header {
   text-align: center;
-  margin-top: -60px;
+  margin-top: -45px;
 }
 
 .price {
-  font-size: 1.5rem;
-  margin: 10px 0;
+  font-size: 1.3rem;
+  margin: 10px;
+
+  color: rgba(69, 178, 157, 1);
 }
 
 .old-price {
   text-decoration: line-through;
-  color: #ff0000;
-  margin-right: 10px;
+  color: rgba(227, 40, 40, 1);
+  margin-right: 5px;
+  font-weight: bold;
 }
 
 .payment-options {
   display: flex;
   justify-content: center;
+  font-size: 10px;
+
   gap: 10px;
 }
 
+.payment-options input[type="radio"] {
+  appearance: none;
+  width: 14px; /* Size of the radio button */
+  height: 14px;
+
+  border: 2.5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: scale(0.7);
+
+  margin-top: -5px;
+  background-color: rgb(9, 53, 44);
+  cursor: pointer;
+}
+
+/* Styling for the checked state */
+.payment-options input[type="radio"]:checked {
+  background-color: rgba(69, 178, 157, 1);
+  border: 2.5px solid rgb(255, 255, 255);
+}
+
+.divider {
+  border: none;
+  border-top: 0.46px solid rgba(84, 84, 84, 1);
+  width: 90%;
+}
+
 .freebie {
-  color: #00a000;
-  font-weight: bold;
+  color: rgba(69, 178, 157, 1);
 }
 
 .highlight-black {
@@ -72,54 +106,38 @@
 
 .features-list {
   text-align: left;
-  list-style: none; 
+  list-style: none;
+  padding-left: 25px;
 }
 
 .features-list li {
   background-repeat: no-repeat;
-  padding-left: 40px; 
+  padding-left: 20px;
+  font-size: 11px;
 
-  line-height: 20px; 
+  background-size: 12px 12px;
 }
 
 .buy-button {
   border: none;
-  padding: 10px 10px;
-  border-radius: 5px;
+  padding: 5px 5px;
+  border-radius: 2.5px;
   cursor: pointer;
-  width: 550px;
-  margin-top: 30px;
-  font-size: 20px;
-  transition: background-color 0.3s;
+  width: 275px;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+
   background: linear-gradient(
-    to right,
+    to left,
     rgba(243, 204, 46, 1),
     rgba(255, 235, 154, 1)
   );
 }
 
-.buy-button:hover {
-  background-color: #ffa500;
-  background: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0.5),
-    rgba(255, 0, 0, 1)
-  );
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid rgba(84, 84, 84, 1);
-  width: 90%;
-}
-
-.App {
-  text-align: center;
-}
-
 .header1 {
-  text-align: center;
-  font-size: 30px;
+  margin-top: -10px;
 }
 
 .highlight {
@@ -134,55 +152,52 @@
 
 @media only screen and (max-width: 425px) {
   .App {
-    flex-direction: column;
+    display: flex; 
+    overflow-x: auto; 
+    gap: 10px; 
+    width: 100%; 
+    padding-bottom: 10px; 
+  }
 
-    padding: 20px;
-    
+  .App::-webkit-scrollbar {
+    display: none; 
   }
 
   .yoga-card {
-    width: 180%;
-   
-    height: 1000px;
-    margin-bottom: 40%;
-    font-size: 18px;
+    width: 220px; 
+    height: 570px; 
+    flex-shrink: 0; 
+    margin-right: 10px; 
   }
 
-  .buy-button {
-    width: 90%;
-    font-size: 18px;
+  .main-heading01 {
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .card-header {
-    margin-top: 0;
-    font-size: 24px;
+    text-align: center;
+    margin-top: 1px;
   }
 
-  .price {
-    font-size: 1.5rem;
+  .buy-button {
+    width: 200px;
   }
 
-  .features-list li {
-    padding-left: 30px; /* Reduced padding for smaller screens */
+  body {
+    overflow-x: auto; 
+    margin: 0; 
   }
 
-  .main-heading {
-    margin-bottom: 60px;
-   
-   margin-right: -250px;
+  .card-header-img {
+    display: flex;
+    margin: 10px;
   }
 
-  .freebie {
-    color: #00a000;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
- 
-  .card-header{
+  .header1 {
+    display: flex;
+    margin-left: 70px;
     margin-top: -50px;
-    
+    font-size: 9px;
   }
-
-  
 }

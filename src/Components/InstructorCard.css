@@ -1,21 +1,16 @@
 .instructor-container {
-  max-width: 1800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 10px;
 }
 
 .instructor-container-bg {
   background: linear-gradient(rgba(251, 255, 254, 1), rgba(234, 255, 251, 1));
-  height: 1400px;
-}
-
-
+  height: 600px; 
+  }
 
 .main-heading {
-   text-align: center;
-  font-size: 70px;
- 
- 
+  text-align: center;
+  font-size: 40px; 
 }
 
 .highlight {
@@ -24,137 +19,183 @@
 
 .instructor-card {
   position: absolute;
-  margin-left: 120px;
+  margin-left: 60px; 
   display: flex;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 7.5px; 
+  box-shadow: 0 4px 7.5px rgba(0, 0, 0, 0.1); 
   background-color: white;
-  width: 1550px;
+  width: 775px; 
+  height: 420px;
+  border: 1.5px solid #2cb597; 
 }
 
 .instructor-name {
-  font-size: 35px;
+  font-size: 18px; 
   font-weight: bold;
-  margin-top: -100px;
-  margin-left: 50px;
-  
+  margin-top: -50px; 
+  margin-left: 30px; 
+  color: #2cb597;
+  position: absolute;
 }
 
 .mastery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  
+ 
 }
 
 .instructor-info {
- margin-top: 20px;
- font-size: 25px;
+  margin-top: 20px; 
+  font-size: 10px; 
   color: #2cb597;
 }
 
+.instructor-info1 {
+  margin-left: 70px;
+}
+
+.resized-image03 {
+  width: 150%;
+
+  margin-top: 70px;
+}
+
 .mastery-item {
-  padding: 8px;
+
   background-repeat: no-repeat;
-  font-size: 25px;
+  font-size: 12px; 
 }
 
 .description {
-  font-size: 18px;
+  font-size: 12px; 
   color: #333;
-  line-height: 1.8;
-  font-size: 25px;
-}
-
-.description strong {
-  color: black;
-}
-
-.img_frame {
-  margin-top: 90px;
+  line-height: 1.5; 
 }
 
 .bord1 {
   position: absolute;
-
-  height: 720px;
-  width: 1700px;
-  margin-top: 100px;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  margin-left: 10px;
+  height: 405px; 
+  width: 850px; 
+  margin-top: 40px;
+  border-radius: 7.5px; 
+  padding: 2.5px; 
+  border: 1.5px solid #2cb597; 
+  box-shadow: 0 4px 7.5px rgba(0, 0, 0, 0.1); 
+  margin-left: 20px; 
   background-color: white;
 }
 
 .bord {
   position: absolute;
- 
-  height: 700px;
-  width: 1600px;
-  margin-top: 60px;
-  margin-left: 60px;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255),
+    transparent
+  ); 
+  background-clip: border-box; 
+  height: 400px; 
+  width: 800px; 
+  margin-top: 20px; 
+  margin-left: 40px; 
+  border-radius: 7.5px; 
+  padding: 7.5px; 
+  box-shadow: 0 4px 7.5px rgba(0, 0, 0, 0.1); 
   background-color: white;
+  border: 0.05px solid #78a097; 
 }
 
-@media (max-width: 720px) {
+.hr-line {
+  width: 95%;
+  border: none;
+  border-top: 0.46px solid #2cb597; 
+}
+
+@media only screen and (max-width: 425px) {
   .instructor-container {
-  height: 2650px;
-    
+    height: 1325px;
+    width: 280px; 
+    flex-shrink: 0;
   }
 
- .main-heading {
-  font-size: 30px;
+  .instructor-container-bg {
+    height: 1325px; 
+  }
 
-}
+  .main-heading {
+    font-size: 25px; 
+    margin-bottom: 50px;
+  }
 
   .instructor-card {
     flex-direction: column;
-    align-items: center;
-    width: 500px;
-    margin: 25px;
-    margin-bottom: 50px;
-    height: 2400px;
-    
+    width: 225px; 
+    margin: 25px; 
+    margin-top: -10px; 
+    height: 1175px; 
   }
 
   .instructor-image {
     text-align: center;
-    
+    margin-right: 80px;
+    margin-top: -50px;
   }
 
   .instructor-name {
-    font-size: 35px;
-    margin-left:0 ;
+    font-size: 17.5px; 
+    margin-left: 50px; 
   }
 
   .instructor-info {
-    margin: 20px;
-    font-size: 18px;
-    text-align: center;
+    margin: 10px; 
+    font-size: 9px; 
+
+    margin-top: -10px; 
   }
 
-  
+  .instructor-info1 {
+    margin: 10px; 
+  }
+
+  .hr-line12 {
+    width: 100%;
+    display: block;
+    border: none;
+    border-top: 0.46px solid #2cb597; 
+  }
 
   .mastery-item {
-  
-    font-size: 20px;
+    margin: -10px; 
+    font-size: 12.5px; 
   }
 
   .description {
-text-align: left;
+    text-align: left;
   }
 
   .bord1,
   .bord {
     width: auto;
     height: auto;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bord {
+    position: absolute;
+    height: 1125px; 
+    width: 265px; 
+    margin-left: 5px; 
+    margin-top: 15px; 
+    border-radius: 7.5px; 
+    background-color: white;
+    border: 1.5px solid #2cb597; 
+  }
+
+  .mastery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    margin-bottom: -10px; 
+    padding: 20px; 
   }
 }

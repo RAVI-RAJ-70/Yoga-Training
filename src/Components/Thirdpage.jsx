@@ -5,49 +5,51 @@ const bullets = {
   backgroundImage: 'url("/images/Group 17.png")',
   marginBottom: "20px",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "25px 25px", // Adjust the bullet size
-  paddingLeft: "40px", // Space for the image
+  backgroundSize: "12px 12px", // Adjust the bullet size
+  paddingLeft: "25px", // Space for the image
   marginRight: "20px", // Space between items
-  lineHeight: "10px", // Align text with the image
+  // Align text with the image
 };
 
 function Thirdpage() {
   return (
     <div>
-      
       <div className="instructor-container-bg">
         <div className="instructor-container">
-
           <h1 className="main-heading">
-          Know More About Our Globally <br /> <span className="highlight">Recognized Yoga Instructors</span>
-            
+            Know More About Our Globally{" "}
+            <span className="highlight">Recognized Yoga Instructors</span>
           </h1>
-
-           <div className="bord1"> </div>
+          <div className="bord1"> </div>
           <div className="bord"> </div>
-         
-          <div className="instructor-card">
-            
 
+          <div className="instructor-card">
             {/* Left Side: Instructor Image */}
             <div className="instructor-image">
               <div className="img_frame">
-                <img src="images/Group 16.jpg" alt="Raaz" />
+                <img
+                  src="images/Group 16.jpg"
+                  alt="Raaz"
+                  className="resized-image03"
+                />
               </div>
 
               <br />
               <p className="instructor-name">Dr. Sumit Sharma</p>
             </div>
             {/* Right Side: Instructor Info */}
-            <div className="instructor-info">
-              <h1>Mastery</h1>
+            <div className="instructor-info1">
+              <div className="instructor-info">
+                <div className="hr-line12"></div>
+                <h1>Mastery</h1>
+              </div>
               {/* Mastery Section */}
               <div className="mastery">
                 <div className="mastery-item" style={bullets}>
                   Dynamic Anatomy
                 </div>
                 <div className="mastery-item" style={bullets}>
-                  Dynamic Physiology
+                  Dynamic Physiology &nbsp;
                 </div>
                 <div className="mastery-item" style={bullets}>
                   Yoga Therapy
@@ -56,7 +58,7 @@ function Thirdpage() {
                   Posture Correction
                 </div>
                 <div className="mastery-item" style={bullets}>
-                  Asana Safety
+                  Asana Safety &nbsp; &nbsp; &nbsp; &nbsp;
                 </div>
                 <div className="mastery-item" style={bullets}>
                   Prevention of Injuries
@@ -65,7 +67,8 @@ function Thirdpage() {
                   Realign Yoga
                 </div>
               </div>
-              <hr />
+
+              <div className="hr-line"></div>
               {/* Description Section */}
               <div className="description">
                 <p>
@@ -102,7 +105,6 @@ function Thirdpage() {
         </div>
       </div>
     </div>
-   
   );
 }
 
